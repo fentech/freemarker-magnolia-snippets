@@ -184,6 +184,9 @@ ${cmsfn.dump()}
 
 # Release Notes  
 
+### v1.1.3
+Updates README
+
 ### v1.1.2
 Updates README with better documentation and adds demo.
 

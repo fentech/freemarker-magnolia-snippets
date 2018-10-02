@@ -1,0 +1,21 @@
+{
+    "name": "freemarker-magnolia-snippets",
+    "displayName": "freemarker-magnolia-snippets",
+    "description": "Snippets to make creating templates easier with Freemarker and Magnolia directives and HTML tags.",
+    "version": "0.0.1",
+    "publisher": "fentech",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "ftl",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

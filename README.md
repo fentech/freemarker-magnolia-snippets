@@ -21,8 +21,9 @@ local       | `[#local $nameOfVariable = $value]`
 
 ### HTML Snippets
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
+
 Snippet     | Output                
------------ | ---------------
+------------|----------------
 section     | `<section></section>`            
 header      | `<header></header>`         
 main        | `<main></main>`            

@@ -348,5 +348,5 @@
       "[@cms.area name=\"$areaName\" /]"
     ],
     "description": "This is a Magnolia directive to render an area by name."
-  },
+  }
 }

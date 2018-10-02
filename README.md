@@ -60,7 +60,7 @@ area        | `[@cms.area name=\"$areaName\" /]`
 
 # Release Information
 
-### v1.0.2
+### v1.0.3
 Adds the switch, case and break snippets.
 
 ### v1.0.2

@@ -4,15 +4,15 @@ These are snippets specific to Freemarker (`.ftl`) files.
 ![Demo](videos/freemarker_snippets_demo.gif)
 
 ## Jump to... 
-__[Freemarker Snippets](#Freemarker-Snippets)__\
-__[HTML Snippets](#HTML-Snippets)__\
-__[Magnolia Snippets](#Magnolia-Snippets)__
+__[Freemarker Snippets](#freemarker-snippets)__  
+__[HTML Snippets](#html-snippets)__  
+__[Magnolia Snippets](#magnolia-snippets)__
 
-\
+&nbsp;
 _Note: All output examples below have dummy data, in curly bracket (i.e. `{variableName}`), that represent tab stops, to show you how it should display._
 
 &nbsp;
-## Freemarker Snippets
+# Freemarker Snippets
 ### __include__
 ```
 [#include "{/path/to/include}"] 
@@ -101,7 +101,7 @@ ${$0}
 ```
 
 &nbsp;
-## HTML Snippets
+# HTML Snippets
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
 
 Snippet     | Output                
@@ -127,7 +127,7 @@ __title__   | `title=""`
 __src__     | `src=""`
 
 &nbsp;
-## Magnolia Snippets
+# Magnolia Snippets
 ### __cmsfn__ 
 ```
 cmsfn.{option}()

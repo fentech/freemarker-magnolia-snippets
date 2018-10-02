@@ -1,61 +1,184 @@
 # Magnolia-Freemarker Snippets
-These are snippets for Freemarker (`.ftl`) files. 
+These are snippets specific to Freemarker (`.ftl`) files. 
 
-### Freemarker Snippets
-Snippet     | Output                  
-------------|-----------------
-include     | `[#include ""]` 
-macro:call  | `[@{macroName} {arguments} /]`
-macro:define| `[#macro {macroName} {arguments}]\n\t\n[/#macro]`
-if          | `[#if $statement]\n\t$0\n[/#if]`
-if:has      | `[#if ${1:statement}?has_content]\n\t$0\n[/#if]`
-if:else     | `[#if ${1:statement}]\n\t$2\n[#else]\n\t$3\n[/#if]`
-if:elseif   | `[#if ${1:statement}]\n\t$2\n[#elseif ${3:statement}]\n\t$4\n[/#if]`
-else        | `[#else]`
-elseif      | `[#elseif $0]`
-switch      | `[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t$0\n\t\t[#break]\n[/#switch]`
-case        | `[#case $value]`
-break       | `[#break]`
-tag         | `[#$0]`
-/           | `[/#$0]`
-int         | `${$0}`
-assign      | `[#assign $nameOfVariable = $value]`
-local       | `[#local $nameOfVariable = $value]`
+![Demo](videos/freemarker_snippets_demo.gif)
+
+## Jump to... 
+__[Freemarker Snippets](#Freemarker-Snippets)__\
+__[HTML Snippets](#HTML-Snippets)__\
+__[Magnolia Snippets](#Magnolia-Snippets)__
+
+\
+_Note: All output examples below have dummy data, in curly bracket (i.e. `{variableName}`), that represent tab stops, to show you how it should display._
+
+## Freemarker Snippets
+### __include__
+```
+[#include "{/path/to/include}"] 
+```
+### __macro:call__
+```
+[@{macroName} {argument=argumentValue} /]
+```
+### __macro:define__
+```
+[#macro {macroName} {arguments=withDefaultValue}] 
+  {code}
+[/#macro]
+```
+### __if__
+```
+[#if {statement}] 
+  {code}
+[/#if]
+```
+### __if:has__
+```
+[#if {statement}?has_content]
+  {code}
+[/#if]
+```
+### __if:else__
+```
+[#if ${1:statement}]
+  {code}
+[#else]
+  {code}
+[/#if]
+```
+### __if:elseif__
+```
+[#if {statement}]
+  {code}
+[#elseif {statement2}]
+  {code}
+[/#if]
+```
+### __else__
+```
+[#else]
+```
+### __elseif__
+```
+[#elseif {statement}]
+```
+### __switch__
+```
+[#switch {variable}]
+  [#case {value1}]
+    {code}
+    [#break]
+[/#switch]
+```
+### __case__
+```
+[#case {value}]
+```
+### __break__
+```
+[#break]
+```
+### __tag__
+```
+[#{tagName}]
+```
+### __/__
+```
+[/#{tagName}]
+```
+### __int__
+```       
+${$0}
+```
+### __assign__
+```
+[#assign {nameOfVariable = value}]
+```
+### __local__
+```
+[#local {nameOfVariable = value}]
+```
 
 
-### HTML Snippets
+## HTML Snippets
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
 
 Snippet     | Output                
 ------------|----------------
-section     | `<section></section>`            
-header      | `<header></header>`         
-main        | `<main></main>`            
-div         | `<div></div>`            
-h1          | `<h1></h1>`
-h2          | `<h2></h2>`
-h3          | `<h3></h3>`
-h4          | `<h4></h4>`
-p           | `<p></p>`
-a           | `<a href="" target="" rel=""></a>`
-img         | `<img src="" alt="" title="" class="">`
-strong      | `<strong></strong>`
-class       | `class=""`
-href        | `href=""`
-style       | `style=""`
-role        | `role=""`
-alt         | `alt=""`
-title       | `title=""`
-src         | `src=""`
+__section__ | `<section></section>`            
+__header__  | `<header></header>`         
+__main__    | `<main></main>`            
+__div__     | `<div></div>`            
+__h1__      | `<h1></h1>`
+__h2__      | `<h2></h2>`
+__h3__      | `<h3></h3>`
+__h4__      | `<h4></h4>`
+__p__       | `<p></p>`
+__a__       | `<a href="" target="" rel=""></a>`
+__img__     | `<img src="" alt="" title="" class="">`
+__strong__  | `<strong></strong>`
+__class__   | `class=""`
+__href__    | `href=""`
+__style__   | `style=""`
+__role__    | `role=""`
+__alt__     | `alt=""`
+__title__   | `title=""`
+__src__     | `src=""`
 
 
-### Magnolia Snippets
-Snippet     | Output          | Options        
-------------|-----------------|------------------
-cmsfn       | `cmsfn.{option}()`| children, contentByPath, contentById, contentListByTemplateId, page, link, externalLink, externalLinkTitle, linkPrefix, localizedLinks, asContentMap, asJCRNode, asNodeList, ancestors, parent, root, siteRoot, dump, isEditMode, isPreviewMode, isAuthorInstance, isPublicInstance, decode, abbreviateString, queryStringAndFragment, language, wrapForI18n, isCurrentLocale, metaData, fileExtension, readableFileSize            
-dump        | `${cmsfn.dump()}`
-components  | `[#list components as component]\n\t[@cms.component content=component /]\n[/#list]`
-area        | `[@cms.area name=\"$areaName\" /]`
+## Magnolia Snippets
+### __cmsfn__ 
+```
+cmsfn.{option}()
+```
+* __options:__
+  1. children
+  2. contentByPath
+  2. contentById
+  2. contentListByTemplateId
+  2. page
+  2. link
+  2. externalLink
+  2. externalLinkTitle
+  2. linkPrefix
+  2. localizedLinks
+  2. asContentMap
+  2. asJCRNode
+  2. asNodeList
+  2. ancestors
+  2. parent
+  2. root
+  2. siteRoot
+  2. dump
+  2. isEditMode
+  2. isPreviewMode
+  2. isAuthorInstance
+  2. isPublicInstance
+  2. decode
+  2. abbreviateString
+  2. queryStringAndFragment
+  2. language
+  2. wrapForI18n
+  2. isCurrentLocale
+  2. metaData
+  2. fileExtension
+  2. readableFileSize 
+
+
+### __dump__
+```
+${cmsfn.dump()}
+```
+### __components__ 
+```
+[#list components as component]
+  [@cms.component content=component /]
+[/#list]
+```
+### __area__ 
+```
+[@cms.area name="{areaName}" /]
+```
 
 
 # Release Information

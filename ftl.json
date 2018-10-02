@@ -1,0 +1,337 @@
+{
+	// Place your snippets for ftl here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"#include": {
+    "prefix": "include",
+    "body": [
+      "[#include \"$pathToFile\"]"
+    ],
+    "description": "Use this to include another Freemarker file"
+	},
+	"call a macro": {
+    "prefix": "macro:call",
+    "body": [
+      "[@$macroName $arguments /]"
+    ],
+    "description": "Call a macro that you've already defined"
+  },
+	"#macro": {
+    "prefix": "macro:define",
+    "body": [
+      "[#macro $macroName $arguments]\n\t$0\n[/#macro]"
+    ],
+    "description": "Freemarker macro tag"
+  },
+	"#if": {
+    "prefix": "if",
+    "body": [
+      "[#if $statement]\n\t$0\n[/#if]"
+    ],
+    "description": ""
+  },
+	"#if has_content": {
+    "prefix": "if:has",
+    "body": [
+      "[#if ${1:statement}?has_content]\n\t$0\n[/#if]"
+    ],
+    "description": ""
+  },
+	"#if else": {
+    "prefix": "if:else",
+    "body": [
+      "[#if ${1:statement}]\n\t$2\n[#else]\n\t$3\n[/#if]"
+    ],
+    "description": ""
+  },
+	"#if #elseif": {
+    "prefix": "if:elseif",
+    "body": [
+      "[#if ${1:statement}]\n\t$2\n[#elseif ${3:statement}]\n\t$4\n[/#if]"
+    ],
+    "description": ""
+  },
+	"#else": {
+    "prefix": "else",
+    "body": [
+      "[#else]"
+    ],
+    "description": ""
+	},
+	"empty tag": {
+    "prefix": "tag",
+    "body": [
+      "[#$0]"
+    ],
+    "description": ""
+	},
+	"closing tag": {
+    "prefix": "/",
+    "body": [
+      "[/#$0]"
+    ],
+    "description": ""
+	},
+	"string interpolation": {
+    "prefix": "int",
+    "body": [
+      "${$0}"
+    ],
+    "description": ""
+	},
+	"#assign": {
+    "prefix": "assign",
+    "body": [
+      "[#assign $nameOfVariable = $value]"
+    ],
+    "description": ""
+	},
+	"#local": {
+    "prefix": "local",
+    "body": [
+      "[#local $nameOfVariable = $value]"
+    ],
+    "description": ""
+	},
+  "section": {
+    "prefix": "section",
+    "body": [
+      "<section>\n\t$0\n</section>"
+    ],
+    "description": ""
+	},
+  "section with class": {
+    "prefix": "section.",
+    "body": [
+      "<section class=\"$1\">\n\t$0\n</section>"
+    ],
+    "description": ""
+	},
+	"header": {
+    "prefix": "header",
+    "body": [
+      "<header>\n\t$0\n</header>"
+    ],
+    "description": ""
+	},
+	"header with class": {
+    "prefix": "header.",
+    "body": [
+      "<header class=\"$1\">\n\t$0\n</header>"
+    ],
+    "description": ""
+	},
+	"main": {
+    "prefix": "main",
+    "body": [
+      "<main>\n\t$0\n</main>"
+    ],
+    "description": ""
+	},
+	"main with class": {
+    "prefix": "main.",
+    "body": [
+      "<main class=\"$1\">\n\t$0\n</main>"
+    ],
+    "description": ""
+	},
+	"div": {
+    "prefix": "div",
+    "body": [
+      "<div>\n\t$0\n</div>"
+    ],
+    "description": ""
+	},
+	"div with classes": {
+    "prefix": "div.",
+    "body": [
+      "<div class=\"$1\">\n\t$0\n</div>"
+    ],
+    "description": ""
+	},
+	"h1": {
+    "prefix": "h1",
+    "body": [
+      "<h1>$0</h1>"
+    ],
+    "description": ""
+	},
+	"h1 with class": {
+    "prefix": "h1.",
+    "body": [
+      "<h1 class=\"$1\">$0</h1>"
+    ],
+    "description": ""
+	},
+	"h2": {
+    "prefix": "h2",
+    "body": [
+      "<h2>$0</h2>"
+    ],
+    "description": ""
+	},
+	"h2 with class": {
+    "prefix": "h2.",
+    "body": [
+      "<h2 class=\"$1\">$0</h2>"
+    ],
+    "description": ""
+	},
+	"h3": {
+    "prefix": "h3",
+    "body": [
+      "<h3>$0</h3>"
+    ],
+    "description": ""
+	},
+	"h3 with class": {
+    "prefix": "h3.",
+    "body": [
+      "<h3 class=\"$1\">$0</h3>"
+    ],
+    "description": ""
+	},
+	"h4": {
+    "prefix": "h4",
+    "body": [
+      "<h4>$0</h4>"
+    ],
+    "description": ""
+	},
+	"h4 with class": {
+    "prefix": "h4.",
+    "body": [
+      "<h4 class=\"$1\">$0</h4>"
+    ],
+    "description": ""
+	},
+	"p": {
+    "prefix": "p",
+    "body": [
+      "<p>$0</p>"
+    ],
+    "description": ""
+	},
+	"p with class": {
+    "prefix": "p.",
+    "body": [
+      "<p class=\"$1\">$0</p>"
+    ],
+    "description": ""
+	},
+	"strong": {
+    "prefix": "strong",
+    "body": [
+      "<strong>$0</strong>"
+    ],
+    "description": ""
+	},
+	"strong with class": {
+    "prefix": "strong.",
+    "body": [
+      "<strong class=\"$1\">$0</strong>"
+    ],
+    "description": ""
+	},
+	"class": {
+    "prefix": "class",
+    "body": [
+      "class=\"$0\""
+    ],
+    "description": ""
+	},
+	"href": {
+    "prefix": "href",
+    "body": [
+      "href=\"$0\""
+    ],
+    "description": ""
+	},
+	"style": {
+    "prefix": "style",
+    "body": [
+      "style=\"$0\""
+    ],
+    "description": ""
+	},
+	"role": {
+    "prefix": "role",
+    "body": [
+      "role=\"$0\""
+    ],
+    "description": ""
+	},
+	"alt": {
+    "prefix": "alt",
+    "body": [
+      "alt=\"$0\""
+    ],
+    "description": ""
+	},
+	"title": {
+    "prefix": "title",
+    "body": [
+      "title=\"$0\""
+    ],
+    "description": ""
+	},
+	"src": {
+    "prefix": "src",
+    "body": [
+      "src=\"$0\""
+    ],
+    "description": ""
+	},
+	"a": {
+    "prefix": "a",
+    "body": [
+      "<a href=\"$1\" target=\"$2\" rel=\"$3\">$0</a>"
+    ],
+    "description": ""
+	},
+	"image": {
+    "prefix": "img",
+    "body": [
+      "<img src=\"$1\" alt=\"$2\" title=\"$3\" class=\"$4\">"
+    ],
+    "description": ""
+	},
+	"cmsfn": {
+    "prefix": "cmsfn",
+    "body": [
+      "cmsfn.${1|children,contentByPath,contentById,contentListByTemplateId,page,link,externalLink,externalLinkTitle,linkPrefix,localizedLinks,asContentMap,asJCRNode,asNodeList,ancestors,parent,root,siteRoot,dump,isEditMode,isPreviewMode,isAuthorInstance,isPublicInstance,decode,abbreviateString,queryStringAndFragment,language,wrapForI18n,isCurrentLocale,metaData,fileExtension,readableFileSize|}($0)"
+    ],
+    "description": ""
+	},
+	"cmsfn.dump()": {
+    "prefix": "dump",
+    "body": [
+      "${cmsfn.dump($0)}"
+    ],
+    "description": ""
+  },
+  "list components": {
+    "prefix": "components",
+    "body": [
+      "[#list components as component]\n\t[@cms.component content=component /]\n[/#list]"
+    ],
+    "description": "This is the default way to list over and render components in Magnolia templating."
+	},
+	"render an area": {
+    "prefix": "area",
+    "body": [
+      "[@cms.area name=\"$areaName\" /]"
+    ],
+    "description": "This is a Magnolia directive to render an area by name."
+  },
+}

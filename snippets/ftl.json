@@ -62,6 +62,27 @@
     ],
     "description": ""
 	},
+	"#switch": {
+    "prefix": "switch",
+    "body": [
+      "[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t[#break]\n[/#switch]"
+    ],
+    "description": ""
+	},
+	"#case": {
+    "prefix": "case",
+    "body": [
+      "[#case $value]"
+    ],
+    "description": ""
+	},
+	"#break": {
+    "prefix": "break",
+    "body": [
+      "[#break]"
+    ],
+    "description": ""
+	},
 	"empty tag": {
     "prefix": "tag",
     "body": [

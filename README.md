@@ -12,6 +12,10 @@ if:has      | `[#if ${1:statement}?has_content]\n\t$0\n[/#if]`
 if:else     | `[#if ${1:statement}]\n\t$2\n[#else]\n\t$3\n[/#if]`
 if:elseif   | `[#if ${1:statement}]\n\t$2\n[#elseif ${3:statement}]\n\t$4\n[/#if]`
 else        | `[#else]`
+elseif      | `[#elseif $0]`
+switch      | `[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t$0\n\t\t[#break]\n[/#switch]`
+case        | `[#case $value]`
+break       | `[#break]`
 tag         | `[#$0]`
 /           | `[/#$0]`
 int         | `${$0}`
@@ -52,3 +56,12 @@ cmsfn       | `cmsfn.{option}()`| children, contentByPath, contentById, contentL
 dump        | `${cmsfn.dump()}`
 components  | `[#list components as component]\n\t[@cms.component content=component /]\n[/#list]`
 area        | `[@cms.area name=\"$areaName\" /]`
+
+
+# Release Information
+
+### v1.0.2
+Adds the switch, case and break snippets.
+
+### v1.0.2
+Adds the elseif snippet to out put a single elseif tag (`[#elseif {condition}]`).

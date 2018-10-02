@@ -11,6 +11,7 @@ __[Magnolia Snippets](#Magnolia-Snippets)__
 \
 _Note: All output examples below have dummy data, in curly bracket (i.e. `{variableName}`), that represent tab stops, to show you how it should display._
 
+&nbsp;
 ## Freemarker Snippets
 ### __include__
 ```
@@ -99,7 +100,7 @@ ${$0}
 [#local {nameOfVariable = value}]
 ```
 
-
+&nbsp;
 ## HTML Snippets
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
 
@@ -125,7 +126,7 @@ __alt__     | `alt=""`
 __title__   | `title=""`
 __src__     | `src=""`
 
-
+&nbsp;
 ## Magnolia Snippets
 ### __cmsfn__ 
 ```
@@ -179,9 +180,12 @@ ${cmsfn.dump()}
 ```
 [@cms.area name="{areaName}" /]
 ```
+&nbsp;
 
+# Release Notes  
 
-# Release Information
+### v1.1.2
+Updates README with better documentation and adds demo.
 
 ### v1.1.1
 Fixes switch statement last tab stop.

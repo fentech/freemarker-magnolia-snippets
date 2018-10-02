@@ -55,6 +55,13 @@
     ],
     "description": ""
 	},
+	"#elseif": {
+    "prefix": "elseif",
+    "body": [
+      "[#elseif $0]"
+    ],
+    "description": ""
+	},
 	"empty tag": {
     "prefix": "tag",
     "body": [

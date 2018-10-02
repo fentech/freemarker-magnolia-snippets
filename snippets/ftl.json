@@ -65,7 +65,7 @@
 	"#switch": {
     "prefix": "switch",
     "body": [
-      "[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t[#break]\n[/#switch]"
+      "[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t$0\n\t\t[#break]\n[/#switch]"
     ],
     "description": ""
 	},

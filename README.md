@@ -60,8 +60,8 @@ area        | `[@cms.area name=\"$areaName\" /]`
 
 # Release Information
 
-### v1.0.3
-Adds the switch, case and break snippets.
+### v1.1.1
+Fixes switch statement last tab stop.
 
-### v1.0.2
-Adds the elseif snippet to out put a single elseif tag (`[#elseif {condition}]`).
+### v1.1.0
+Adds the switch, case, break, and elseif snippets.

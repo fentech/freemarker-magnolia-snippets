@@ -41,7 +41,7 @@ _Note: All output examples below have dummy data, in curly bracket (i.e. `{varia
 ```
 ### __if:else__
 ```
-[#if ${1:statement}]
+[#if {statement}]
   {code}
 [#else]
   {code}
@@ -104,27 +104,33 @@ ${$0}
 # HTML Snippets
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
 
-Snippet     | Output                
-------------|----------------
-__section__ | `<section></section>`            
-__header__  | `<header></header>`         
-__main__    | `<main></main>`            
-__div__     | `<div></div>`            
-__h1__      | `<h1></h1>`
-__h2__      | `<h2></h2>`
-__h3__      | `<h3></h3>`
-__h4__      | `<h4></h4>`
-__p__       | `<p></p>`
-__a__       | `<a href="" target="" rel=""></a>`
-__img__     | `<img src="" alt="" title="" class="">`
-__strong__  | `<strong></strong>`
-__class__   | `class=""`
-__href__    | `href=""`
-__style__   | `style=""`
-__role__    | `role=""`
-__alt__     | `alt=""`
-__title__   | `title=""`
-__src__     | `src=""`
+Snippet           | Has Class  | Output                
+------------------|------------|----------------
+__section__       | 	&#x2714; | `<section></section>`            
+__header__        | 	&#x2714; | `<header></header>`         
+__main__          | 	&#x2714; | `<main></main>`            
+__div__           | 	&#x2714; | `<div></div>`            
+__span__          | 	&#x2714; | `<span></span>`            
+__h1__            | 	&#x2714; | `<h1></h1>`
+__h2__            | 	&#x2714; | `<h2></h2>`
+__h3__            | 	&#x2714; | `<h3></h3>`
+__h4__            | 	&#x2714; | `<h4></h4>`
+__p__             | 	&#x2714; | `<p></p>`
+__strong__        | 	&#x2714; | `<strong></strong>`
+__a__             | 	&#x2714; | `<a href="{href}"></a>`
+__img__           | 	&#x2714; | `<img src="{src}" alt="{alt}" title="{title}">`
+__meta__          || `<meta property="{property}" content="{content}">`
+__link__          || `<link rel="{rel}" href="{href}">`
+__script__        || `<script type="{type}" src="{src}"></script>`
+__script#__       || `<script id="{id}" type="{type}" src="{src}"></script>`
+__script:block__  || `<script></script>`
+__class__         || `class=""`
+__href__          || `href=""`
+__style__         || `style=""`
+__role__          || `role=""`
+__alt__           || `alt=""`
+__title__         || `title=""`
+__src__           || `src=""`
 
 &nbsp;
 # Magnolia Snippets
@@ -183,6 +189,9 @@ ${cmsfn.dump()}
 &nbsp;
 
 # Release Notes  
+
+### v1.1.4
+Adds snippets for the following HTML tags: span, a tag with class, image tag with class, meta, link, script (script, script with id, and script block). Updates the README to indicate which html tags have a 'with class' variant.
 
 ### v1.1.3
 Updates README

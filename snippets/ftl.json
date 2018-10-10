@@ -118,206 +118,269 @@
     ],
     "description": ""
 	},
-  "section": {
+  "section tag": {
     "prefix": "section",
     "body": [
       "<section>\n\t$0\n</section>"
     ],
     "description": ""
 	},
-  "section with class": {
+  "section tag with class": {
     "prefix": "section.",
     "body": [
       "<section class=\"$1\">\n\t$0\n</section>"
     ],
     "description": ""
 	},
-	"header": {
+	"header tag": {
     "prefix": "header",
     "body": [
       "<header>\n\t$0\n</header>"
     ],
     "description": ""
 	},
-	"header with class": {
+	"header tag with class": {
     "prefix": "header.",
     "body": [
       "<header class=\"$1\">\n\t$0\n</header>"
     ],
     "description": ""
 	},
-	"main": {
+	"main tag": {
     "prefix": "main",
     "body": [
       "<main>\n\t$0\n</main>"
     ],
     "description": ""
 	},
-	"main with class": {
+	"main tag with class": {
     "prefix": "main.",
     "body": [
       "<main class=\"$1\">\n\t$0\n</main>"
     ],
     "description": ""
 	},
-	"div": {
+	"div tag": {
     "prefix": "div",
     "body": [
       "<div>\n\t$0\n</div>"
     ],
     "description": ""
 	},
-	"div with classes": {
+	"div tag with classes": {
     "prefix": "div.",
     "body": [
       "<div class=\"$1\">\n\t$0\n</div>"
     ],
     "description": ""
 	},
-	"h1": {
+	"span tag": {
+    "prefix": "span",
+    "body": [
+      "<span>\n\t$0\n</span>"
+    ],
+    "description": ""
+	},
+	"span tag with classes": {
+    "prefix": "span.",
+    "body": [
+      "<span class=\"$1\">\n\t$0\n</span>"
+    ],
+    "description": ""
+	},
+	"h1 tag": {
     "prefix": "h1",
     "body": [
       "<h1>$0</h1>"
     ],
     "description": ""
 	},
-	"h1 with class": {
+	"h1 tag with class": {
     "prefix": "h1.",
     "body": [
       "<h1 class=\"$1\">$0</h1>"
     ],
     "description": ""
 	},
-	"h2": {
+	"h2 tag": {
     "prefix": "h2",
     "body": [
       "<h2>$0</h2>"
     ],
     "description": ""
 	},
-	"h2 with class": {
+	"h2 tag with class": {
     "prefix": "h2.",
     "body": [
       "<h2 class=\"$1\">$0</h2>"
     ],
     "description": ""
 	},
-	"h3": {
+	"h3 tag": {
     "prefix": "h3",
     "body": [
       "<h3>$0</h3>"
     ],
     "description": ""
 	},
-	"h3 with class": {
+	"h3 tag with class": {
     "prefix": "h3.",
     "body": [
       "<h3 class=\"$1\">$0</h3>"
     ],
     "description": ""
 	},
-	"h4": {
+	"h4 tag": {
     "prefix": "h4",
     "body": [
       "<h4>$0</h4>"
     ],
     "description": ""
 	},
-	"h4 with class": {
+	"h4 tag with class": {
     "prefix": "h4.",
     "body": [
       "<h4 class=\"$1\">$0</h4>"
     ],
     "description": ""
 	},
-	"p": {
+	"p tag": {
     "prefix": "p",
     "body": [
       "<p>$0</p>"
     ],
     "description": ""
 	},
-	"p with class": {
+	"p tag with class": {
     "prefix": "p.",
     "body": [
       "<p class=\"$1\">$0</p>"
     ],
     "description": ""
 	},
-	"strong": {
+  "strong tag": {
     "prefix": "strong",
     "body": [
       "<strong>$0</strong>"
     ],
     "description": ""
-	},
-	"strong with class": {
+  },
+  "strong tag with class": {
     "prefix": "strong.",
     "body": [
       "<strong class=\"$1\">$0</strong>"
     ],
     "description": ""
+  },
+	"a tag": {
+    "prefix": "a",
+    "body": [
+      "<a href=\"$1\">$0</a>"
+    ],
+    "description": ""
 	},
-	"class": {
+	"a tag with class": {
+    "prefix": "a.",
+    "body": [
+      "<a href=\"$1\" class=\"$2\">$0</a>"
+    ],
+    "description": ""
+  },
+  "img tag": {
+    "prefix": "image",
+    "body": [
+      "<img src=\"$1\" alt=\"$2\" title=\"$3\">"
+    ],
+    "description": ""
+	},
+  "img tag with class": {
+    "prefix": "image.",
+    "body": [
+      "<img src=\"$1\" alt=\"$2\" title=\"$3\" class=\"$4\">"
+    ],
+    "description": ""
+	},
+  "meta tag": {
+    "prefix": "meta",
+    "body": [
+      "<meta property=\"$1\" content=\"$0\">"
+    ],
+    "description": ""
+	},
+  "link tag": {
+    "prefix": "link",
+    "body": [
+      "<link rel=\"$1\" href=\"$0\">"
+    ],
+    "description": ""
+	},
+  "script tag": {
+    "prefix": "script",
+    "body": [
+      "<script type=\"$1\" src=\"$0\"></script>"
+    ],
+    "description": ""
+	},
+  "script tag with id": {
+    "prefix": "script#",
+    "body": [
+      "<script id=\"$1\" type=\"$2\" src=\"$0\"></script>"
+    ],
+    "description": ""
+	},
+  "script tag block": {
+    "prefix": "script:block",
+    "body": [
+      "<script></script>"
+    ],
+    "description": ""
+	},
+	"class attribute": {
     "prefix": "class",
     "body": [
       "class=\"$0\""
     ],
     "description": ""
 	},
-	"href": {
+	"href attribute": {
     "prefix": "href",
     "body": [
       "href=\"$0\""
     ],
     "description": ""
 	},
-	"style": {
+	"style attribute": {
     "prefix": "style",
     "body": [
       "style=\"$0\""
     ],
     "description": ""
 	},
-	"role": {
+	"role attribute": {
     "prefix": "role",
     "body": [
       "role=\"$0\""
     ],
     "description": ""
 	},
-	"alt": {
+	"alt attribute": {
     "prefix": "alt",
     "body": [
       "alt=\"$0\""
     ],
     "description": ""
 	},
-	"title": {
+	"title attribute": {
     "prefix": "title",
     "body": [
       "title=\"$0\""
     ],
     "description": ""
 	},
-	"src": {
+	"src attribute": {
     "prefix": "src",
     "body": [
       "src=\"$0\""
-    ],
-    "description": ""
-	},
-	"a": {
-    "prefix": "a",
-    "body": [
-      "<a href=\"$1\" target=\"$2\" rel=\"$3\">$0</a>"
-    ],
-    "description": ""
-	},
-	"image": {
-    "prefix": "img",
-    "body": [
-      "<img src=\"$1\" alt=\"$2\" title=\"$3\" class=\"$4\">"
     ],
     "description": ""
 	},

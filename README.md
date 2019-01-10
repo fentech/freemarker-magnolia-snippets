@@ -1,7 +1,10 @@
 # Magnolia-Freemarker Snippets
-These are snippets specific to Freemarker (`.ftl`) files. 
+
+Visual Studio snippets for the [FreeMarker](https://freemarker.apache.org/) templating language. The snippets work in `.ftl` files.
 
 ![Demo](videos/freemarker_snippets_demo.gif)
+
+[**Install the Extension →**](https://marketplace.visualstudio.com/items?itemName=fentech.freemarker-magnolia-snippets)
 
 ## Jump to... 
 __[Freemarker Snippets](#freemarker-snippets)__  
@@ -173,8 +176,11 @@ cmsfn.{option}()
 
 
 ### __dump__
-```
-${cmsfn.dump()}
+
+Outputs Magnolia [`cmsfn.dump()`](https://documentation.magnolia-cms.com/display/DOCS60/cmsfn#cmsfn-Dump) templating function.
+
+```ftl
+${cmsfn.dump({object_to_dump}, 3 , true)}
 ```
 ### __components__ 
 ```
@@ -188,7 +194,10 @@ ${cmsfn.dump()}
 ```
 &nbsp;
 
-# Release Notes  
+# Release Notes
+
+### v1.1.5
+Sets default `depth` and `asHtml` arguments of `cmsfn.dump()` snippet.
 
 ### v1.1.4
 Adds snippets for the following HTML tags: span, a tag with class, image tag with class, meta, link, script (script, script with id, and script block). Updates the README to indicate which html tags have a 'with class' variant.

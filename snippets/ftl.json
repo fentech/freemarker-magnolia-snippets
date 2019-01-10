@@ -394,7 +394,7 @@
 	"cmsfn.dump()": {
     "prefix": "dump",
     "body": [
-      "${cmsfn.dump($0)}"
+      "${cmsfn.dump($0, 3, true)}"
     ],
     "description": ""
   },

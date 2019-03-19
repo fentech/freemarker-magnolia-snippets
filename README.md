@@ -6,43 +6,57 @@ Visual Studio snippets for the [FreeMarker](https://freemarker.apache.org/) temp
 
 [**Install the Extension →**](https://marketplace.visualstudio.com/items?itemName=fentech.freemarker-magnolia-snippets)
 
-## Jump to... 
-__[Freemarker Snippets](#freemarker-snippets)__  
-__[HTML Snippets](#html-snippets)__  
-__[Magnolia Snippets](#magnolia-snippets)__
+## Jump to...
+
+**[Freemarker Snippets](#freemarker-snippets)**
+**[HTML Snippets](#html-snippets)**
+**[Magnolia Snippets](#magnolia-snippets)**
 
 &nbsp;
 _Note: All output examples below have dummy data, in curly bracket (i.e. `{variableName}`), that represent tab stops, to show you how it should display._
 
 &nbsp;
+
 # Freemarker Snippets
-### __include__
+
+### **include**
+
 ```
-[#include "{/path/to/include}"] 
+[#include "{/path/to/include}"]
 ```
-### __macro:call__
+
+### **macro:call**
+
 ```
 [@{macroName} {argument=argumentValue} /]
 ```
-### __macro:define__
+
+### **macro:define**
+
 ```
-[#macro {macroName} {arguments=withDefaultValue}] 
+[#macro {macroName} {arguments=withDefaultValue}]
   {code}
 [/#macro]
 ```
-### __if__
+
+### **if**
+
 ```
-[#if {statement}] 
+[#if {statement}]
   {code}
 [/#if]
 ```
-### __if:has__
+
+### **if:has**
+
 ```
 [#if {statement}?has_content]
   {code}
 [/#if]
 ```
-### __if:else__
+
+### **if:else**
+
 ```
 [#if {statement}]
   {code}
@@ -50,7 +64,9 @@ _Note: All output examples below have dummy data, in curly bracket (i.e. `{varia
   {code}
 [/#if]
 ```
-### __if:elseif__
+
+### **if:elseif**
+
 ```
 [#if {statement}]
   {code}
@@ -58,15 +74,21 @@ _Note: All output examples below have dummy data, in curly bracket (i.e. `{varia
   {code}
 [/#if]
 ```
-### __else__
+
+### **else**
+
 ```
 [#else]
 ```
-### __elseif__
+
+### **elseif**
+
 ```
 [#elseif {statement}]
 ```
-### __switch__
+
+### **switch**
+
 ```
 [#switch {variable}]
   [#case {value1}]
@@ -74,142 +96,173 @@ _Note: All output examples below have dummy data, in curly bracket (i.e. `{varia
     [#break]
 [/#switch]
 ```
-### __case__
+
+### **case**
+
 ```
 [#case {value}]
 ```
-### __break__
+
+### **break**
+
 ```
 [#break]
 ```
-### __tag__
+
+### **tag**
+
 ```
 [#{tagName}]
 ```
-### __/__
+
+### **/**
+
 ```
 [/#{tagName}]
 ```
-### __int__
-```       
+
+### **int**
+
+```
 ${$0}
 ```
-### __assign__
+
+### **assign**
+
 ```
 [#assign {nameOfVariable = value}]
 ```
-### __local__
+
+### **local**
+
 ```
 [#local {nameOfVariable = value}]
 ```
 
 &nbsp;
-# HTML Snippets
-Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs   `<section class=""></section>`).
 
-Snippet           | Has Class  | Output                
-------------------|------------|----------------
-__section__       | 	&#x2714; | `<section></section>`            
-__header__        | 	&#x2714; | `<header></header>`         
-__main__          | 	&#x2714; | `<main></main>`            
-__div__           | 	&#x2714; | `<div></div>`            
-__span__          | 	&#x2714; | `<span></span>`            
-__h1__            | 	&#x2714; | `<h1></h1>`
-__h2__            | 	&#x2714; | `<h2></h2>`
-__h3__            | 	&#x2714; | `<h3></h3>`
-__h4__            | 	&#x2714; | `<h4></h4>`
-__p__             | 	&#x2714; | `<p></p>`
-__strong__        | 	&#x2714; | `<strong></strong>`
-__a__             | 	&#x2714; | `<a href="{href}"></a>`
-__img__           | 	&#x2714; | `<img src="{src}" alt="{alt}" title="{title}">`
-__meta__          || `<meta property="{property}" content="{content}">`
-__link__          || `<link rel="{rel}" href="{href}">`
-__script__        || `<script type="{type}" src="{src}"></script>`
-__script#__       || `<script id="{id}" type="{type}" src="{src}"></script>`
-__script:block__  || `<script></script>`
-__class__         || `class=""`
-__href__          || `href=""`
-__style__         || `style=""`
-__role__          || `role=""`
-__alt__           || `alt=""`
-__title__         || `title=""`
-__src__           || `src=""`
+# HTML Snippets
+
+Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs `<section class=""></section>`).
+
+| Snippet          | Has Class | Output                                                  |
+| ---------------- | --------- | ------------------------------------------------------- |
+| **section**      | &#x2714;  | `<section></section>`                                   |
+| **header**       | &#x2714;  | `<header></header>`                                     |
+| **main**         | &#x2714;  | `<main></main>`                                         |
+| **div**          | &#x2714;  | `<div></div>`                                           |
+| **span**         | &#x2714;  | `<span></span>`                                         |
+| **h1**           | &#x2714;  | `<h1></h1>`                                             |
+| **h2**           | &#x2714;  | `<h2></h2>`                                             |
+| **h3**           | &#x2714;  | `<h3></h3>`                                             |
+| **h4**           | &#x2714;  | `<h4></h4>`                                             |
+| **p**            | &#x2714;  | `<p></p>`                                               |
+| **strong**       | &#x2714;  | `<strong></strong>`                                     |
+| **a**            | &#x2714;  | `<a href="{href}"></a>`                                 |
+| **button**       | &#x2714;  | `<button></button>`                                     |
+| **img**          | &#x2714;  | `<img src="{src}" alt="{alt}" title="{title}">`         |
+| **meta**         |           | `<meta property="{property}" content="{content}">`      |
+| **link**         |           | `<link rel="{rel}" href="{href}">`                      |
+| **script**       |           | `<script type="{type}" src="{src}"></script>`           |
+| **script#**      |           | `<script id="{id}" type="{type}" src="{src}"></script>` |
+| **script:block** |           | `<script></script>`                                     |
+| **class**        |           | `class=""`                                              |
+| **href**         |           | `href=""`                                               |
+| **style**        |           | `style=""`                                              |
+| **role**         |           | `role=""`                                               |
+| **alt**          |           | `alt=""`                                                |
+| **title**        |           | `title=""`                                              |
+| **src**          |           | `src=""`                                                |
 
 &nbsp;
+
 # Magnolia Snippets
-### __cmsfn__ 
+
+### **cmsfn**
+
 ```
 cmsfn.{option}()
 ```
-* __options:__
+
+- **options:**
   1. children
   2. contentByPath
-  2. contentById
-  2. contentListByTemplateId
-  2. page
-  2. link
-  2. externalLink
-  2. externalLinkTitle
-  2. linkPrefix
-  2. localizedLinks
-  2. asContentMap
-  2. asJCRNode
-  2. asNodeList
-  2. ancestors
-  2. parent
-  2. root
-  2. siteRoot
-  2. dump
-  2. isEditMode
-  2. isPreviewMode
-  2. isAuthorInstance
-  2. isPublicInstance
-  2. decode
-  2. abbreviateString
-  2. queryStringAndFragment
-  2. language
-  2. wrapForI18n
-  2. isCurrentLocale
-  2. metaData
-  2. fileExtension
-  2. readableFileSize 
+  3. contentById
+  4. contentListByTemplateId
+  5. page
+  6. link
+  7. externalLink
+  8. externalLinkTitle
+  9. linkPrefix
+  10. localizedLinks
+  11. asContentMap
+  12. asJCRNode
+  13. asNodeList
+  14. ancestors
+  15. parent
+  16. root
+  17. siteRoot
+  18. dump
+  19. isEditMode
+  20. isPreviewMode
+  21. isAuthorInstance
+  22. isPublicInstance
+  23. decode
+  24. abbreviateString
+  25. queryStringAndFragment
+  26. language
+  27. wrapForI18n
+  28. isCurrentLocale
+  29. metaData
+  30. fileExtension
+  31. readableFileSize
 
-
-### __dump__
+### **dump**
 
 Outputs Magnolia [`cmsfn.dump()`](https://documentation.magnolia-cms.com/display/DOCS60/cmsfn#cmsfn-Dump) templating function.
 
 ```ftl
 ${cmsfn.dump({object_to_dump}, 3 , true)}
 ```
-### __components__ 
+
+### **components**
+
 ```
 [#list components as component]
   [@cms.component content=component /]
 [/#list]
 ```
-### __area__ 
+
+### **area**
+
 ```
 [@cms.area name="{areaName}" /]
 ```
+
 &nbsp;
 
 # Release Notes
 
 ### v1.1.5
+
 Sets default `depth` and `asHtml` arguments of `cmsfn.dump()` snippet.
 
 ### v1.1.4
+
 Adds snippets for the following HTML tags: span, a tag with class, image tag with class, meta, link, script (script, script with id, and script block). Updates the README to indicate which html tags have a 'with class' variant.
 
 ### v1.1.3
+
 Updates README
 
 ### v1.1.2
+
 Updates README with better documentation and adds demo.
 
 ### v1.1.1
+
 Fixes switch statement last tab stop.
 
 ### v1.1.0
+
 Adds the switch, case, break, and elseif snippets.

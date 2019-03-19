@@ -1,401 +1,303 @@
 {
-	"#include": {
+  "#include": {
     "prefix": "include",
-    "body": [
-      "[#include \"$pathToFile\"]"
-    ],
+    "body": ["[#include \"$pathToFile\"]"],
     "description": "Use this to include another Freemarker file"
-	},
-	"call a macro": {
+  },
+  "call a macro": {
     "prefix": "macro:call",
-    "body": [
-      "[@$macroName $arguments /]"
-    ],
+    "body": ["[@$macroName $arguments /]"],
     "description": "Call a macro that you've already defined"
   },
-	"#macro": {
+  "#macro": {
     "prefix": "macro:define",
-    "body": [
-      "[#macro $macroName $arguments]\n\t$0\n[/#macro]"
-    ],
+    "body": ["[#macro $macroName $arguments]\n\t$0\n[/#macro]"],
     "description": "Freemarker macro tag"
   },
-	"#if": {
+  "#if": {
     "prefix": "if",
-    "body": [
-      "[#if $statement]\n\t$0\n[/#if]"
-    ],
+    "body": ["[#if $statement]\n\t$0\n[/#if]"],
     "description": ""
   },
-	"#if has_content": {
+  "#if has_content": {
     "prefix": "if:has",
-    "body": [
-      "[#if ${1:statement}?has_content]\n\t$0\n[/#if]"
-    ],
+    "body": ["[#if ${1:statement}?has_content]\n\t$0\n[/#if]"],
     "description": ""
   },
-	"#if else": {
+  "#if else": {
     "prefix": "if:else",
-    "body": [
-      "[#if ${1:statement}]\n\t$2\n[#else]\n\t$3\n[/#if]"
-    ],
+    "body": ["[#if ${1:statement}]\n\t$2\n[#else]\n\t$3\n[/#if]"],
     "description": ""
   },
-	"#if #elseif": {
+  "#if #elseif": {
     "prefix": "if:elseif",
     "body": [
       "[#if ${1:statement}]\n\t$2\n[#elseif ${3:statement}]\n\t$4\n[/#if]"
     ],
     "description": ""
   },
-	"#else": {
+  "#else": {
     "prefix": "else",
-    "body": [
-      "[#else]"
-    ],
+    "body": ["[#else]"],
     "description": ""
-	},
-	"#elseif": {
+  },
+  "#elseif": {
     "prefix": "elseif",
-    "body": [
-      "[#elseif $0]"
-    ],
+    "body": ["[#elseif $0]"],
     "description": ""
-	},
-	"#switch": {
+  },
+  "#switch": {
     "prefix": "switch",
     "body": [
       "[#switch ${1:variable}]\n\t[#case ${2:value1}]\n\t\t$0\n\t\t[#break]\n[/#switch]"
     ],
     "description": ""
-	},
-	"#case": {
+  },
+  "#case": {
     "prefix": "case",
-    "body": [
-      "[#case $value]"
-    ],
+    "body": ["[#case $value]"],
     "description": ""
-	},
-	"#break": {
+  },
+  "#break": {
     "prefix": "break",
-    "body": [
-      "[#break]"
-    ],
+    "body": ["[#break]"],
     "description": ""
-	},
-	"empty tag": {
+  },
+  "empty tag": {
     "prefix": "tag",
-    "body": [
-      "[#$0]"
-    ],
+    "body": ["[#$0]"],
     "description": ""
-	},
-	"closing tag": {
+  },
+  "closing tag": {
     "prefix": "/",
-    "body": [
-      "[/#$0]"
-    ],
+    "body": ["[/#$0]"],
     "description": ""
-	},
-	"string interpolation": {
+  },
+  "string interpolation": {
     "prefix": "int",
-    "body": [
-      "${$0}"
-    ],
+    "body": ["${$0}"],
     "description": ""
-	},
-	"#assign": {
+  },
+  "#assign": {
     "prefix": "assign",
-    "body": [
-      "[#assign $nameOfVariable = $value]"
-    ],
+    "body": ["[#assign $nameOfVariable = $value]"],
     "description": ""
-	},
-	"#local": {
+  },
+  "#local": {
     "prefix": "local",
-    "body": [
-      "[#local $nameOfVariable = $value]"
-    ],
+    "body": ["[#local $nameOfVariable = $value]"],
     "description": ""
-	},
+  },
   "section tag": {
     "prefix": "section",
-    "body": [
-      "<section>\n\t$0\n</section>"
-    ],
+    "body": ["<section>\n\t$0\n</section>"],
     "description": ""
-	},
+  },
   "section tag with class": {
     "prefix": "section.",
-    "body": [
-      "<section class=\"$1\">\n\t$0\n</section>"
-    ],
+    "body": ["<section class=\"$1\">\n\t$0\n</section>"],
     "description": ""
-	},
-	"header tag": {
+  },
+  "header tag": {
     "prefix": "header",
-    "body": [
-      "<header>\n\t$0\n</header>"
-    ],
+    "body": ["<header>\n\t$0\n</header>"],
     "description": ""
-	},
-	"header tag with class": {
+  },
+  "header tag with class": {
     "prefix": "header.",
-    "body": [
-      "<header class=\"$1\">\n\t$0\n</header>"
-    ],
+    "body": ["<header class=\"$1\">\n\t$0\n</header>"],
     "description": ""
-	},
-	"main tag": {
+  },
+  "main tag": {
     "prefix": "main",
-    "body": [
-      "<main>\n\t$0\n</main>"
-    ],
+    "body": ["<main>\n\t$0\n</main>"],
     "description": ""
-	},
-	"main tag with class": {
+  },
+  "main tag with class": {
     "prefix": "main.",
-    "body": [
-      "<main class=\"$1\">\n\t$0\n</main>"
-    ],
+    "body": ["<main class=\"$1\">\n\t$0\n</main>"],
     "description": ""
-	},
-	"div tag": {
+  },
+  "div tag": {
     "prefix": "div",
-    "body": [
-      "<div>\n\t$0\n</div>"
-    ],
+    "body": ["<div>\n\t$0\n</div>"],
     "description": ""
-	},
-	"div tag with classes": {
+  },
+  "div tag with classes": {
     "prefix": "div.",
-    "body": [
-      "<div class=\"$1\">\n\t$0\n</div>"
-    ],
+    "body": ["<div class=\"$1\">\n\t$0\n</div>"],
     "description": ""
-	},
-	"span tag": {
+  },
+  "span tag": {
     "prefix": "span",
-    "body": [
-      "<span>\n\t$0\n</span>"
-    ],
+    "body": ["<span>\n\t$0\n</span>"],
     "description": ""
-	},
-	"span tag with classes": {
+  },
+  "span tag with classes": {
     "prefix": "span.",
-    "body": [
-      "<span class=\"$1\">\n\t$0\n</span>"
-    ],
+    "body": ["<span class=\"$1\">\n\t$0\n</span>"],
     "description": ""
-	},
-	"h1 tag": {
+  },
+  "h1 tag": {
     "prefix": "h1",
-    "body": [
-      "<h1>$0</h1>"
-    ],
+    "body": ["<h1>$0</h1>"],
     "description": ""
-	},
-	"h1 tag with class": {
+  },
+  "h1 tag with class": {
     "prefix": "h1.",
-    "body": [
-      "<h1 class=\"$1\">$0</h1>"
-    ],
+    "body": ["<h1 class=\"$1\">$0</h1>"],
     "description": ""
-	},
-	"h2 tag": {
+  },
+  "h2 tag": {
     "prefix": "h2",
-    "body": [
-      "<h2>$0</h2>"
-    ],
+    "body": ["<h2>$0</h2>"],
     "description": ""
-	},
-	"h2 tag with class": {
+  },
+  "h2 tag with class": {
     "prefix": "h2.",
-    "body": [
-      "<h2 class=\"$1\">$0</h2>"
-    ],
+    "body": ["<h2 class=\"$1\">$0</h2>"],
     "description": ""
-	},
-	"h3 tag": {
+  },
+  "h3 tag": {
     "prefix": "h3",
-    "body": [
-      "<h3>$0</h3>"
-    ],
+    "body": ["<h3>$0</h3>"],
     "description": ""
-	},
-	"h3 tag with class": {
+  },
+  "h3 tag with class": {
     "prefix": "h3.",
-    "body": [
-      "<h3 class=\"$1\">$0</h3>"
-    ],
+    "body": ["<h3 class=\"$1\">$0</h3>"],
     "description": ""
-	},
-	"h4 tag": {
+  },
+  "h4 tag": {
     "prefix": "h4",
-    "body": [
-      "<h4>$0</h4>"
-    ],
+    "body": ["<h4>$0</h4>"],
     "description": ""
-	},
-	"h4 tag with class": {
+  },
+  "h4 tag with class": {
     "prefix": "h4.",
-    "body": [
-      "<h4 class=\"$1\">$0</h4>"
-    ],
+    "body": ["<h4 class=\"$1\">$0</h4>"],
     "description": ""
-	},
-	"p tag": {
+  },
+  "p tag": {
     "prefix": "p",
-    "body": [
-      "<p>$0</p>"
-    ],
+    "body": ["<p>$0</p>"],
     "description": ""
-	},
-	"p tag with class": {
+  },
+  "p tag with class": {
     "prefix": "p.",
-    "body": [
-      "<p class=\"$1\">$0</p>"
-    ],
+    "body": ["<p class=\"$1\">$0</p>"],
     "description": ""
-	},
+  },
   "strong tag": {
     "prefix": "strong",
-    "body": [
-      "<strong>$0</strong>"
-    ],
+    "body": ["<strong>$0</strong>"],
     "description": ""
   },
   "strong tag with class": {
     "prefix": "strong.",
-    "body": [
-      "<strong class=\"$1\">$0</strong>"
-    ],
+    "body": ["<strong class=\"$1\">$0</strong>"],
     "description": ""
   },
-	"a tag": {
+  "a tag": {
     "prefix": "a",
-    "body": [
-      "<a href=\"$1\">$0</a>"
-    ],
+    "body": ["<a href=\"$1\">$0</a>"],
     "description": ""
-	},
-	"a tag with class": {
+  },
+  "a tag with class": {
     "prefix": "a.",
-    "body": [
-      "<a href=\"$1\" class=\"$2\">$0</a>"
-    ],
+    "body": ["<a href=\"$1\" class=\"$2\">$0</a>"],
+    "description": ""
+  },
+  "button tag": {
+    "prefix": "button",
+    "body": ["<button>$0</button>"],
+    "description": ""
+  },
+  "button tag with class": {
+    "prefix": "button.",
+    "body": ["<button class=\"$2\">$0</button>"],
     "description": ""
   },
   "img tag": {
     "prefix": "image",
-    "body": [
-      "<img src=\"$1\" alt=\"$2\" title=\"$3\">"
-    ],
+    "body": ["<img src=\"$1\" alt=\"$2\" title=\"$3\">"],
     "description": ""
-	},
+  },
   "img tag with class": {
     "prefix": "image.",
-    "body": [
-      "<img src=\"$1\" alt=\"$2\" title=\"$3\" class=\"$4\">"
-    ],
+    "body": ["<img src=\"$1\" alt=\"$2\" title=\"$3\" class=\"$4\">"],
     "description": ""
-	},
+  },
   "meta tag": {
     "prefix": "meta",
-    "body": [
-      "<meta property=\"$1\" content=\"$0\">"
-    ],
+    "body": ["<meta property=\"$1\" content=\"$0\">"],
     "description": ""
-	},
+  },
   "link tag": {
     "prefix": "link",
-    "body": [
-      "<link rel=\"$1\" href=\"$0\">"
-    ],
+    "body": ["<link rel=\"$1\" href=\"$0\">"],
     "description": ""
-	},
+  },
   "script tag": {
     "prefix": "script",
-    "body": [
-      "<script type=\"$1\" src=\"$0\"></script>"
-    ],
+    "body": ["<script type=\"$1\" src=\"$0\"></script>"],
     "description": ""
-	},
+  },
   "script tag with id": {
     "prefix": "script#",
-    "body": [
-      "<script id=\"$1\" type=\"$2\" src=\"$0\"></script>"
-    ],
+    "body": ["<script id=\"$1\" type=\"$2\" src=\"$0\"></script>"],
     "description": ""
-	},
+  },
   "script tag block": {
     "prefix": "script:block",
-    "body": [
-      "<script></script>"
-    ],
+    "body": ["<script></script>"],
     "description": ""
-	},
-	"class attribute": {
+  },
+  "class attribute": {
     "prefix": "class",
-    "body": [
-      "class=\"$0\""
-    ],
+    "body": ["class=\"$0\""],
     "description": ""
-	},
-	"href attribute": {
+  },
+  "href attribute": {
     "prefix": "href",
-    "body": [
-      "href=\"$0\""
-    ],
+    "body": ["href=\"$0\""],
     "description": ""
-	},
-	"style attribute": {
+  },
+  "style attribute": {
     "prefix": "style",
-    "body": [
-      "style=\"$0\""
-    ],
+    "body": ["style=\"$0\""],
     "description": ""
-	},
-	"role attribute": {
+  },
+  "role attribute": {
     "prefix": "role",
-    "body": [
-      "role=\"$0\""
-    ],
+    "body": ["role=\"$0\""],
     "description": ""
-	},
-	"alt attribute": {
+  },
+  "alt attribute": {
     "prefix": "alt",
-    "body": [
-      "alt=\"$0\""
-    ],
+    "body": ["alt=\"$0\""],
     "description": ""
-	},
-	"title attribute": {
+  },
+  "title attribute": {
     "prefix": "title",
-    "body": [
-      "title=\"$0\""
-    ],
+    "body": ["title=\"$0\""],
     "description": ""
-	},
-	"src attribute": {
+  },
+  "src attribute": {
     "prefix": "src",
-    "body": [
-      "src=\"$0\""
-    ],
+    "body": ["src=\"$0\""],
     "description": ""
-	},
-	"cmsfn": {
+  },
+  "cmsfn": {
     "prefix": "cmsfn",
     "body": [
       "cmsfn.${1|children,contentByPath,contentById,contentListByTemplateId,page,link,externalLink,externalLinkTitle,linkPrefix,localizedLinks,asContentMap,asJCRNode,asNodeList,ancestors,parent,root,siteRoot,dump,isEditMode,isPreviewMode,isAuthorInstance,isPublicInstance,decode,abbreviateString,queryStringAndFragment,language,wrapForI18n,isCurrentLocale,metaData,fileExtension,readableFileSize|}($0)"
     ],
     "description": ""
-	},
-	"cmsfn.dump()": {
+  },
+  "cmsfn.dump()": {
     "prefix": "dump",
-    "body": [
-      "${cmsfn.dump($0, 3, true)}"
-    ],
+    "body": ["${cmsfn.dump($0, 3, true)}"],
     "description": ""
   },
   "list components": {
@@ -404,12 +306,10 @@
       "[#list components as component]\n\t[@cms.component content=component /]\n[/#list]"
     ],
     "description": "This is the default way to list over and render components in Magnolia templating."
-	},
-	"render an area": {
+  },
+  "render an area": {
     "prefix": "area",
-    "body": [
-      "[@cms.area name=\"$areaName\" /]"
-    ],
+    "body": ["[@cms.area name=\"$areaName\" /]"],
     "description": "This is a Magnolia directive to render an area by name."
   }
 }

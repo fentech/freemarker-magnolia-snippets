@@ -3,7 +3,7 @@
     "displayName": "Freemarker/Magnolia/HTML Snippets",
     "description": "Snippets to make creating templates easier with Freemarker and Magnolia directives and HTML tags.",
     "icon": "images/FMHS_icon.png",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "publisher": "fentech",
     "engines": {
         "vscode": "^1.27.0"

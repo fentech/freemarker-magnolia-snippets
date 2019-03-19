@@ -243,6 +243,10 @@ ${cmsfn.dump({object_to_dump}, 3 , true)}
 
 # Release Notes
 
+### v1.2.0
+
+Adds `button` tag snippets
+
 ### v1.1.5
 
 Sets default `depth` and `asHtml` arguments of `cmsfn.dump()` snippet.

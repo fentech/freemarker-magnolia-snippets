@@ -145,34 +145,36 @@ ${$0}
 
 Add a period "`.`" to the end of any html snippet to add a class property (e.g. "`section.`" outputs `<section class=""></section>`).
 
-| Snippet          | Has Class | Output                                                  |
-| ---------------- | --------- | ------------------------------------------------------- |
-| **section**      | &#x2714;  | `<section></section>`                                   |
-| **header**       | &#x2714;  | `<header></header>`                                     |
-| **main**         | &#x2714;  | `<main></main>`                                         |
-| **div**          | &#x2714;  | `<div></div>`                                           |
-| **span**         | &#x2714;  | `<span></span>`                                         |
-| **h1**           | &#x2714;  | `<h1></h1>`                                             |
-| **h2**           | &#x2714;  | `<h2></h2>`                                             |
-| **h3**           | &#x2714;  | `<h3></h3>`                                             |
-| **h4**           | &#x2714;  | `<h4></h4>`                                             |
-| **p**            | &#x2714;  | `<p></p>`                                               |
-| **strong**       | &#x2714;  | `<strong></strong>`                                     |
-| **a**            | &#x2714;  | `<a href="{href}"></a>`                                 |
-| **button**       | &#x2714;  | `<button></button>`                                     |
-| **img**          | &#x2714;  | `<img src="{src}" alt="{alt}" title="{title}">`         |
-| **meta**         |           | `<meta property="{property}" content="{content}">`      |
-| **link**         |           | `<link rel="{rel}" href="{href}">`                      |
-| **script**       |           | `<script type="{type}" src="{src}"></script>`           |
-| **script#**      |           | `<script id="{id}" type="{type}" src="{src}"></script>` |
-| **script:block** |           | `<script></script>`                                     |
-| **class**        |           | `class=""`                                              |
-| **href**         |           | `href=""`                                               |
-| **style**        |           | `style=""`                                              |
-| **role**         |           | `role=""`                                               |
-| **alt**          |           | `alt=""`                                                |
-| **title**        |           | `title=""`                                              |
-| **src**          |           | `src=""`                                                |
+| Snippet          | Has Class | Output                                                              |
+| ---------------- | --------- | ------------------------------------------------------------------- |
+| **section**      | &#x2714;  | `<section></section>`                                               |
+| **header**       | &#x2714;  | `<header></header>`                                                 |
+| **main**         | &#x2714;  | `<main></main>`                                                     |
+| **div**          | &#x2714;  | `<div></div>`                                                       |
+| **form**         | &#x2714;  | `<form id="{id}" action="{action}" method="{method}"></form>`       |
+| **input**        | &#x2714;  | `<input id="{name}" name="{name}" type="{type}" value="{value}" />` |
+| **span**         | &#x2714;  | `<span></span>`                                                     |
+| **h1**           | &#x2714;  | `<h1></h1>`                                                         |
+| **h2**           | &#x2714;  | `<h2></h2>`                                                         |
+| **h3**           | &#x2714;  | `<h3></h3>`                                                         |
+| **h4**           | &#x2714;  | `<h4></h4>`                                                         |
+| **p**            | &#x2714;  | `<p></p>`                                                           |
+| **strong**       | &#x2714;  | `<strong></strong>`                                                 |
+| **a**            | &#x2714;  | `<a href="{href}"></a>`                                             |
+| **button**       | &#x2714;  | `<button></button>`                                                 |
+| **img**          | &#x2714;  | `<img src="{src}" alt="{alt}" title="{title}">`                     |
+| **meta**         |           | `<meta property="{property}" content="{content}">`                  |
+| **link**         |           | `<link rel="{rel}" href="{href}">`                                  |
+| **script**       |           | `<script type="{type}" src="{src}"></script>`                       |
+| **script#**      |           | `<script id="{id}" type="{type}" src="{src}"></script>`             |
+| **script:block** |           | `<script></script>`                                                 |
+| **class**        |           | `class=""`                                                          |
+| **href**         |           | `href=""`                                                           |
+| **style**        |           | `style=""`                                                          |
+| **role**         |           | `role=""`                                                           |
+| **alt**          |           | `alt=""`                                                            |
+| **title**        |           | `title=""`                                                          |
+| **src**          |           | `src=""`                                                            |
 
 &nbsp;
 
@@ -242,6 +244,10 @@ ${cmsfn.dump({object_to_dump}, 3 , true)}
 &nbsp;
 
 # Release Notes
+
+### v1.3.0
+
+Adds `form` and `input` tag snippets
 
 ### v1.2.0
 

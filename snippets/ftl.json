@@ -128,6 +128,30 @@
     "body": ["<div class=\"$1\">\n\t$0\n</div>"],
     "description": ""
   },
+  "form tag": {
+    "prefix": "form",
+    "body": ["<form id=\"$1\" action=\"$2\" method=\"$3\">\n\t$0\n</form>"],
+    "description": ""
+  },
+  "form tag with classes": {
+    "prefix": "form.",
+    "body": [
+      "<form id=\"$1\" action=\"$2\" method=\"$3\" class=\"$4\">\n\t$0\n</form>"
+    ],
+    "description": ""
+  },
+  "input tag": {
+    "prefix": "input",
+    "body": ["<input id=\"$1\" name=\"$2\" type=\"$3\" value=\"$4\"/>"],
+    "description": ""
+  },
+  "input tag with classes": {
+    "prefix": "input.",
+    "body": [
+      "<input id=\"$1\" name=\"$2\" type=\"$3\" value=\"$4\" class=\"$5\"/>"
+    ],
+    "description": ""
+  },
   "span tag": {
     "prefix": "span",
     "body": ["<span>\n\t$0\n</span>"],

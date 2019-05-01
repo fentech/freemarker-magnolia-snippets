@@ -19,6 +19,8 @@ _Note: All output examples below have dummy data, in curly bracket (i.e. `{varia
 
 # Freemarker Snippets
 
+All ftl commands have a arrow wrapper option `<>` with a similar prefix.
+
 ### **include**
 
 ```
@@ -244,6 +246,9 @@ ${cmsfn.dump({object_to_dump}, 3 , true)}
 &nbsp;
 
 # Release Notes
+
+### v1.4.0
+Adds arrow wrapper `<>` option snippets for all ftl commands
 
 ### v1.3.0
 

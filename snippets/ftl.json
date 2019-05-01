@@ -88,6 +88,126 @@
     "body": ["[#local $nameOfVariable = $value]"],
     "description": ""
   },
+  "list components": {
+    "prefix": "components",
+    "body": [
+      "[#list components as component]\n\t[@cms.component content=component /]\n[/#list]"
+    ],
+    "description": "This is the default way to list over and render components in Magnolia templating."
+  },
+  "render an area": {
+    "prefix": "area",
+    "body": ["[@cms.area name=\"$areaName\" /]"],
+    "description": "This is a Magnolia directive to render an area by name."
+  },
+  "<> #include": {
+    "prefix": "include:>",
+    "body": ["<#include \"$pathToFile\">"],
+    "description": "Use this to include another Freemarker file"
+  },
+  "<> call a macro": {
+    "prefix": "macro:call:>",
+    "body": ["<@$macroName $arguments />"],
+    "description": "Call a macro that you've already defined"
+  },
+  "<> #macro": {
+    "prefix": "macro:define:>",
+    "body": ["<#macro $macroName $arguments>\n\t$0\n</#macro>"],
+    "description": "Freemarker macro tag"
+  },
+  "<> #if": {
+    "prefix": "if:>",
+    "body": ["<#if $statement>\n\t$0\n</#if>"],
+    "description": ""
+  },
+  "<> #if has_content": {
+    "prefix": "if:has:>",
+    "body": ["<#if ${1:statement}?has_content>\n\t$0\n</#if>"],
+    "description": ""
+  },
+  "<> #if else": {
+    "prefix": "if:else:>",
+    "body": ["<#if ${1:statement}>\n\t$2\n<#else>\n\t$3\n</#if>"],
+    "description": ""
+  },
+  "<> #if #elseif": {
+    "prefix": "if:elseif:>",
+    "body": [
+      "<#if ${1:statement}>\n\t$2\n<#elseif ${3:statement}>\n\t$4\n</#if>"
+    ],
+    "description": ""
+  },
+  "<> #else": {
+    "prefix": "else:>",
+    "body": ["<#else>"],
+    "description": ""
+  },
+  "<> #elseif": {
+    "prefix": "elseif:>",
+    "body": ["<#elseif $0>"],
+    "description": ""
+  },
+  "<> #switch": {
+    "prefix": "switch:>",
+    "body": [
+      "<#switch ${1:variable}>\n\t<#case ${2:value1}>\n\t\t$0\n\t\t<#break>\n</#switch>"
+    ],
+    "description": ""
+  },
+  "<> #case": {
+    "prefix": "case:>",
+    "body": ["<#case $value>"],
+    "description": ""
+  },
+  "<> #break": {
+    "prefix": "break:>",
+    "body": ["<#break>"],
+    "description": ""
+  },
+  "<> empty tag": {
+    "prefix": "tag:>",
+    "body": ["<#$0>"],
+    "description": ""
+  },
+  "<> closing tag": {
+    "prefix": "/:>",
+    "body": ["</#$0>"],
+    "description": ""
+  },
+  "<> #assign": {
+    "prefix": "assign:>",
+    "body": ["<#assign $nameOfVariable = $value>"],
+    "description": ""
+  },
+  "<> #local": {
+    "prefix": "local:>",
+    "body": ["<#local $nameOfVariable = $value>"],
+    "description": ""
+  },
+  "<> list components": {
+    "prefix": "components:>",
+    "body": [
+      "<#list components as component>\n\t<@cms.component content=component />\n</#list>"
+    ],
+    "description": "This is the default way to list over and render components in Magnolia templating."
+  },
+  "<> render an area": {
+    "prefix": "area:>",
+    "body": ["<@cms.area name=\"$areaName\" />"],
+    "description": "This is a Magnolia directive to render an area by name."
+  },
+  "cmsfn": {
+    "prefix": "cmsfn",
+    "body": [
+      "cmsfn.${1|children,contentByPath,contentById,contentListByTemplateId,page,link,externalLink,externalLinkTitle,linkPrefix,localizedLinks,asContentMap,asJCRNode,asNodeList,ancestors,parent,root,siteRoot,dump,isEditMode,isPreviewMode,isAuthorInstance,isPublicInstance,decode,abbreviateString,queryStringAndFragment,language,wrapForI18n,isCurrentLocale,metaData,fileExtension,readableFileSize|}($0)"
+    ],
+    "description": ""
+  },
+  "cmsfn.dump()": {
+    "prefix": "dump",
+    "body": ["${cmsfn.dump($0, 3, true)}"],
+    "description": ""
+  },
   "section tag": {
     "prefix": "section",
     "body": ["<section>\n\t$0\n</section>"],
@@ -311,29 +431,5 @@
     "prefix": "src",
     "body": ["src=\"$0\""],
     "description": ""
-  },
-  "cmsfn": {
-    "prefix": "cmsfn",
-    "body": [
-      "cmsfn.${1|children,contentByPath,contentById,contentListByTemplateId,page,link,externalLink,externalLinkTitle,linkPrefix,localizedLinks,asContentMap,asJCRNode,asNodeList,ancestors,parent,root,siteRoot,dump,isEditMode,isPreviewMode,isAuthorInstance,isPublicInstance,decode,abbreviateString,queryStringAndFragment,language,wrapForI18n,isCurrentLocale,metaData,fileExtension,readableFileSize|}($0)"
-    ],
-    "description": ""
-  },
-  "cmsfn.dump()": {
-    "prefix": "dump",
-    "body": ["${cmsfn.dump($0, 3, true)}"],
-    "description": ""
-  },
-  "list components": {
-    "prefix": "components",
-    "body": [
-      "[#list components as component]\n\t[@cms.component content=component /]\n[/#list]"
-    ],
-    "description": "This is the default way to list over and render components in Magnolia templating."
-  },
-  "render an area": {
-    "prefix": "area",
-    "body": ["[@cms.area name=\"$areaName\" /]"],
-    "description": "This is a Magnolia directive to render an area by name."
   }
 }
